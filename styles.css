@@ -22,20 +22,24 @@ body {
     color: #648DE5;
     font-family: 'Cormorant', serif;
     position: relative;
-    text-shadow: 0 0 1px rgba(0,0,0,0.3)
+    text-shadow: 0 0 1px rgba(0,0,0,0.3);
+}
+
+body.page {
+    background: linear-gradient(180deg, rgba(19, 19, 29, 1) 0%, rgba(32, 32, 50, 1) 80%);
 }
 
 body > .background {
-    background:url(images/space.png) no-repeat;
     background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
+    background:url(images/space.png) no-repeat;
     bottom: 0;
-    right: 0;
-    opacity: .2;
-    width: 100%;
     height: 1200px;
+    left: 0;
+    opacity: .2;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
 }
 
 blockquote {
@@ -46,6 +50,75 @@ blockquote {
     padding-left: 0.5em;
 }
 
+button, .button {
+    background-color: #13131d;
+    border: 2px solid rgba(100, 141, 229,.7);
+    border-radius: 6px;
+    color: #F3F3F7;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    padding: 8px 24px;
+}
+
+button:hover, .button:hover {
+    background-color: rgba(100, 141, 229,.2);
+    border: 2px solid rgba(100, 141, 229,.8);
+}
+
+input[type="checkbox"], input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #13131d;
+    border-radius: 0.15em;
+    border: 0.15em solid rgba(100, 141, 229,.5);
+    color: #648DE5;
+    cursor: pointer;
+    display: grid;
+    font: inherit;
+    height: 1.15em;
+    margin: 0;
+    place-content: center;
+    transform: translateY(-0.075em);
+    width: 1.15em;
+}
+
+input[type="radio"]::before, input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #648DE5;
+}
+
+input[type="radio"]:checked::before, input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+input[type="text"], input[type="email"], select, label {
+    display: block;
+}
+
+input[type="text"], input[type="email"], select, textarea {
+    background-color: #13131d;
+    border-radius: 6px;
+    border: 1px solid rgba(100, 141, 229,.35);
+    color: #F3F3F7;
+    font-family: 'Raleway', sans-serif;
+    max-width: 400px;
+    padding: 8px;
+    width: 100%;
+}
+
+input[type="radio"] {
+    border-radius: 50%;
+}
+
+input[type="radio"]::before {
+    border-radius: 50%;
+}
+
+
 h1, h2, h3, h4, h5, h6, header {
     font-family: 'Cormorant', sans-serif;
     font-weight: 600;
@@ -53,9 +126,10 @@ h1, h2, h3, h4, h5, h6, header {
 }
 
 header .subheader {
-        font-size: 1.75rem;
-        line-height: 1.25;
-        font-weight: 400;
+    font-size: 1.75rem;
+    line-height: 1.25;
+    font-weight: 400;
+    margin: 1em 0;
 }
 
 @media screen and (min-width: 700px) {
@@ -70,10 +144,47 @@ header .subheader {
     }
 }
 
+hr {
+    border: 0;
+    border-bottom: 2px solid rgba(100, 141, 229,.8);
+    margin: 1em 0;
+}
+
+label, .fieldset {
+    font-size: 1.1rem;
+    margin-bottom: 2em;
+}
+
+@media screen and (min-width: 700px) {
+    label, .fieldset {
+        font-size: 1.125rem;
+    }
+}
+
+.fieldset label, label.fieldset {
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.fieldset label:hover, label.fieldset:hover {
+    color: #aac0f1;
+}
+
+label.fieldset.checkbox {
+    margin-bottom: 2em;
+}
+
 p {
     font-size: 1.25rem;
     line-height: 1.5;
     font-weight: 400;
+}
+
+.page p {
+    font-size: 1.125rem;
 }
 
 @media screen and (min-width: 700px) {
@@ -81,6 +192,79 @@ p {
         font-size: 1.5rem;
         line-height: 1.7;
     }
+}
+
+.label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+@media screen and (min-width: 700px) {
+    .label {
+        margin-bottom: 1.25em;
+        font-size: 1.2rem;
+    }
+}
+
+.label, .sublabel {
+    align-items: flex-start;
+    display: flex;
+    gap: 0.25em;
+    margin-top: -0.5em;
+    margin-bottom: 1em;
+}
+
+.picture {
+    border: 2px solid #F3F3F7;
+    border-radius: 12px;
+    margin: auto;
+    max-height: 200px;
+    min-width: 200px;
+    overflow: hidden;
+    width: 200px;
+}
+
+.picture img {
+    height: 100%;
+    width: 100%;
+}
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.select-wrapper {
+    max-width: 400px;
+    position: relative;
+    width: 100%;
+}
+
+.select-wrapper::after {
+    content: "⌄";
+    font-size: 1rem;
+    pointer-events: none;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+.sublabel {
+    border-left: 3px solid rgba(100, 141, 229,.2);
+    color: rgba(39.2%,55.3%,89.8%, 0.8);
+    font-size: 1.05rem;
+    padding-left: 0.5em;
+}
+
+.required {
+    border: 1px solid rgba(100, 141, 229,.2);;
+    border-radius: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    margin-left: 4px;
+    padding: 2px 8px;
+    text-wrap: nowrap;
 }
 
 .section {
@@ -106,6 +290,7 @@ p {
 .hero {
     background: rgb(19, 19, 29);
     background: linear-gradient(180deg, rgba(19, 19, 29,0) 0%, rgba(19, 19, 29,.3) 100%);
+    display: flex;
     position: relative;
 }
 
@@ -117,10 +302,19 @@ p {
     padding-top: 1em;
 }
 
+.page .hero header>h1 .h1pt2 {
+    display: block;
+    font-size: 2rem;
+}
+
 @media screen and (min-width: 700px) {
     .hero header>h1 {
         font-size: 4rem;
         padding-top: 0.5em;
+    }
+
+    .page .hero header>h1 .h1pt2 {
+        font-size: 2.5rem;
     }
 }
 
@@ -129,6 +323,34 @@ p {
         font-size: 5rem;
         padding-top: 0;
     }
+
+    .page .hero header>h1 .h1pt2 {
+        font-size: 3.5rem;
+    }
+}
+
+.options ul {
+    align-items: center;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 1em 0 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 700px) {
+    .options ul {
+        flex-direction: row;
+    }
+}
+
+.options ul li {
+    display: block;
+}
+
+.options ul li a {
+    display: block;
 }
 
 .socials {
@@ -265,20 +487,7 @@ p {
     }
 }
 
-.bio .content .picture {
-    border: 2px solid #F3F3F7;
-    border-radius: 12px;
-    margin: auto;
-    max-height: 200px;
-    min-width: 200px;
-    overflow: hidden;
-    width: 200px;
-}
 
-.bio .content .picture img {
-    height: 100%;
-    width: 100%;
-}
 
 .bio .content .text {
     width: auto;
@@ -443,4 +652,152 @@ footer .copyright p {
     font-family: 'Raleway', sans-serif;
     font-size: 0.9rem;
     font-weight: 300;
+}
+
+
+/* Page Specific Content */
+.page .subheader {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+@media screen and (min-width: 700px) {
+    .page .subheader {
+        flex-direction: row;
+    }
+}
+
+
+.page .main .content {
+    background: rgba(19,19,29, 0.5);
+    border: 2px solid rgba(100, 141, 229,.5);
+    border-radius: 12px;
+    padding: 2em;
+}
+
+.page .main .instructions {
+    font-family: 'Raleway', sans-serif;
+}
+
+.page .main .instructions p:first-child {
+    margin-top: 0;
+}
+
+.page .main form {
+    padding-top: 1em;
+}
+
+.page footer {
+    background: #3730a3;
+    border-top: 2px solid #648DE5;
+    color: #F3F3F7;
+    margin-top: 4em;
+}
+
+.page footer a {
+    color: #c7d2fe;
+}
+
+.page footer a:hover {
+    color: #fff;
+}
+
+.page .socials {
+    background: none transparent;
+    display: flex;
+    gap: 1em;
+    padding-bottom: 1em;
+}
+
+.page .socials a {
+    border: 0;
+}
+
+.page .copyright p {
+    color: rgba(243,243,247, 0.8);
+}
+
+/* Basic specific styles */
+.page.basic h2 {
+    font-size: 1.25rem;
+}
+
+@media screen and (min-width: 700px) {
+    .page.basic h2 {
+        font-size: 1.5rem;
+    }
+}
+
+.page.basic .hero header>h1 {
+    font-size: 1.75rem;
+}
+
+@media screen and (min-width: 700px) {
+    .page.basic .hero header {
+        padding: 2em 0 0;
+    }
+    .page.basic .hero header>h1 {
+        font-size: 2.5rem;
+        padding-top: 0.5em;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .page.basic .hero header>h1 {
+        font-size: 3.5rem;
+    }
+}
+
+.page.basic header .subheader {
+    display: block;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    font-weight: 400;
+    margin: 0.5em 0;
+}
+
+@media screen and (min-width: 900px) {
+    .page.basic header .subheader {
+        font-size: 2rem;
+        margin: 0.5em 0;
+    }
+}
+
+.page.basic .section .content {
+    margin-top: 0;
+}
+
+.page.basic .main .content {
+    padding: 0 1em;
+}
+
+.page.basic .main .content p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+@media screen and (min-width: 700px) {
+    .page.basic .main .content p {
+        font-family: 'Raleway', sans-serif;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .page.basic .main .content p {
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.25rem;
+        font-weight: 300;
+    }
+}
+
+.page.basic footer {
+    background: none transparent;
+    box-shadow: none;
+    border: 0;
+    margin-top: 2em;
 }
