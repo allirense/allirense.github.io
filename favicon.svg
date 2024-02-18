@@ -1,12 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Created with Vectornator (http://vectornator.io/) -->
-<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 24 24" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
-<defs/>
-<g id="Untitled" vectornator:layerName="Untitled">
-<g opacity="1" vectornator:layerName="g">
-<path d="M4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12Z" fill="none" opacity="1" stroke="#648de5" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="1.5" vectornator:layerName="circle"/>
-<path d="M19.812 12.99C21.625 14.5 22.567 15.854 22.174 16.641C21.443 18.108 16.369 17.061 10.841 14.305C5.312 11.55 1.423 8.126 2.154 6.66C2.546 5.874 4.187 5.81 6.476 6.345" fill="none" opacity="1" stroke="#648de5" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="1.5" vectornator:layerName="path"/>
-</g>
-</g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="favicon" data-name="favicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110.9 162.14">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #648de5;
+        font-family: Gloock-Regular, Gloock;
+        font-size: 140px;
+        letter-spacing: -.02em;
+        stroke: #648de5;
+        stroke-miterlimit: 10;
+        stroke-width: 8px;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(7.36 126.5)"><tspan x="0" y="0">A</tspan></text>
 </svg>
