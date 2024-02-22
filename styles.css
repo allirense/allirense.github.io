@@ -1,20 +1,30 @@
 :root {
-    --alt-color-rgb: 89,189,144;
+    --alt-color-rgb: 175, 122, 109;
     --alt-color: rgb(var(--alt-color-rgb));
-    --background-color-rgb: 19,19,29;
+    --alt-light-color-rgb: 219, 195, 189;
+    --alt-light-color: rgb(var(--alt-light-color-rgb));
+    --background-color-rgb: 39, 42, 40;
     --background-color: rgb(var(--background-color-rgb));
-    --background-light-color-rgb: 32,32,50;
+    --background-light-color-rgb: 59, 63, 60;
     --background-light-color: rgb(var(--background-light-color-rgb));
-    --background-alt-color-rgb: 16,40,29;
+    --background-alt-color-rgb: 66, 42, 36;
     --background-alt-color: rgb(var(--background-alt-color-rgb));
     --background-offset-color-rgb: 55,48,163;
     --background-offset-color: rgb(var(--background-offset-color-rgb));
-    --highlight-color-rgb: 243,243,247;
+    --highlight-color-rgb: 240, 237, 229;
     --highlight-color: rgb(var(--highlight-color-rgb));
-    --link-color-rgb: 148,176,237;
+    --highlight-dark-color-rgb: 222, 217, 206;
+    --highlight-dark-color: rgb(var(--highlight-dark-color-rgb));
+    --highlight-light-color-rgb: 255,255,255;
+    --highlight-light-color: rgb(var(--highlight-light-color-rgb));
+    --link-color-rgb: 151, 186, 216;
     --link-color: rgb(var(--link-color-rgb));
-    --main-color-rgb: 100,141,229;
+    --main-color-rgb: 122, 166, 205;
     --main-color: rgb(var(--main-color-rgb));
+    --main-dark-color-rgb: 29, 32, 30;
+    --main-dark-color: rgb(var(--main-dark-color-rgb));
+    --main-light-color-rgb: 199,210,254;
+    --main-light-color: rgb(var(--main-light-color-rgb));
     --muted-color-rgb: 152,152,185;
     --muted-color: rgb(var(--muted-color-rgb));
     --offset-color-rgb: 170,192,241;
@@ -406,7 +416,7 @@ select {
 }
 
 .currently h3, .currently p {
-    color: #a7a7c3;
+    color: var(--highlight-dark-color);
 }
 
 .currently h2 {
@@ -559,7 +569,6 @@ select {
 }
 
 .newsletter h2, .newsletter h3 {
-    /* color: #96BAC5; */
     max-width: none;
     text-align: center;
     width: auto;
@@ -577,15 +586,21 @@ select {
 }
 
 .newsletter h3 {
+    color: var(--alt-light-color);
     font-family: 'Raleway', sans-serif;
     font-size: 1.25rem;
     font-weight: 300;
+    margin-top: 0.25em;
 }
 
 @media screen and (min-width: 700px) {
     .newsletter h3 {
         font-size: 1.6rem;
     }
+}
+
+.newsletter p {
+    color: var(--alt-light-color);
 }
 
 .newsletter .subscribe {
@@ -621,13 +636,13 @@ select {
 }
 
 .newsletter .subscribe a:hover {
-    background: var(--main-color);
+    background: var(--alt-light-color);
 }
 
 
 footer {
-    background-color: black;
-    border-top: 2px solid var(--alt-color);
+    background-color: var(--main-dark-color);
+    border-top: 2px solid rgba(var(--alt-color-rgb), 1);
     position: relative;
 }
 
@@ -707,11 +722,11 @@ footer .copyright p {
 }
 
 .page footer a {
-    color: #c7d2fe;
+    color: var(--main-light-color);
 }
 
 .page footer a:hover {
-    color: #fff;
+    color: var(--highlight-light-color);
 }
 
 .page .socials {
