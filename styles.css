@@ -27,8 +27,6 @@
     --main-light-color: rgb(var(--main-light-color-rgb));
     --muted-color-rgb: 152,152,185;
     --muted-color: rgb(var(--muted-color-rgb));
-    --offset-color-rgb: 170,192,241;
-    --offset-color: rgb(var(--offset-color-rgb));
 }
 
 * {
@@ -202,7 +200,7 @@ label, .fieldset {
 }
 
 .fieldset label:hover, label.fieldset:hover {
-    color: var(--offset-color);
+    color: var(--main-light-color);
 }
 
 label.fieldset.checkbox {
