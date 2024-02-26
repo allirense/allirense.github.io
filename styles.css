@@ -15,7 +15,7 @@
     --highlight-color: rgb(var(--highlight-color-rgb));
     --highlight-dark-color-rgb: 222, 217, 206;
     --highlight-dark-color: rgb(var(--highlight-dark-color-rgb));
-    --highlight-light-color-rgb: 255,255,255;
+    --highlight-light-color-rgb: 255, 255, 255;
     --highlight-light-color: rgb(var(--highlight-light-color-rgb));
     --link-color-rgb: 151, 186, 216;
     --link-color: rgb(var(--link-color-rgb));
@@ -25,7 +25,7 @@
     --main-dark-color: rgb(var(--main-dark-color-rgb));
     --main-light-color-rgb: 199,210,254;
     --main-light-color: rgb(var(--main-light-color-rgb));
-    --muted-color-rgb: 152,152,185;
+    --muted-color-rgb: 188, 202, 214;
     --muted-color: rgb(var(--muted-color-rgb));
 }
 
