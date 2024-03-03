@@ -769,6 +769,8 @@ footer .copyright p {
 
 
 /* Page Specific Content */
+
+
 .page .subheader {
     align-items: center;
     display: flex;
@@ -780,6 +782,14 @@ footer .copyright p {
     .page .subheader {
         flex-direction: row;
     }
+}
+
+.page .section.hero {
+    background: var(--background-color-rgb);
+}
+
+.page .main {
+    background: linear-gradient(180deg, rgba(var(--background-color-rgb),1) 0%, rgba(var(--background-color-rgb),0) 100%);
 }
 
 
@@ -822,17 +832,6 @@ footer .copyright p {
     border: 0;
     padding: 0;
 }
-
-/* .page .socials {
-    background: none transparent;
-    display: flex;
-    gap: 1em;
-    padding-bottom: 1em;
-}
-
-.page .socials a {
-    border: 0;
-} */
 
 .page .copyright p {
     color: rgba(var(--highlight-color-rgb) 0.8);
