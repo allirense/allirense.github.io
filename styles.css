@@ -785,10 +785,10 @@ footer .copyright p {
 }
 
 .page .section.hero {
-    background: var(--background-color-rgb);
+    background: var(--background-color);
 }
 
-.page .main {
+.page main {
     background: linear-gradient(180deg, rgba(var(--background-color-rgb),1) 0%, rgba(var(--background-color-rgb),0) 100%);
 }
 
