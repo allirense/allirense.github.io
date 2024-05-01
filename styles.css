@@ -65,7 +65,7 @@ body > .background {
     background-position: top -100px left;
     background-size: cover;
     bottom: 0;
-    height: 1200px;
+    min-height: 100%;
     left: 0;
     position: absolute;
     right: 0;
@@ -474,6 +474,37 @@ select {
     position: relative;
 }
 
+.currently .content {
+    display: flex;
+    gap: 1em;
+    flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 900px) {
+    .currently .content {
+        display: grid;
+        gap: 1em;
+        grid-template-columns: 300px 1fr;
+    }
+}
+
+.currently .moth {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.currently .moth img {
+    width: 300px;
+}
+
+@media screen and (min-width: 900px) {
+.currently .moth img {
+    margin-left: -3em;
+    width: auto;
+}
+}
+
 .currently h3, .currently p {
     color: var(--highlight-dark-color);
 }
@@ -530,7 +561,7 @@ select {
 
 .bio {
     align-items: center;
-    background: linear-gradient(to bottom, rgba(var(--background-color-rgb),.9) 0%,rgba(var(--background-light-color-rgb),1) 80%);
+    background: linear-gradient(to bottom, rgba(var(--background-color-rgb),.9) 0%,rgba(var(--background-light-color-rgb),1) 100%);
     flex-direction: column;
     gap: 16px;
     padding-top: 3em;
