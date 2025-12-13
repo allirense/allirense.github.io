@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@theme {
+    --font-lora: "lora", Georgia, serif;
+    --bg-size-200: "200% 200%";
+    --bg-pos-0: "0% 0%";
+    --bg-pos-100: "100% 100%";
+    --color-hotpink: oklch(0.6418 0.2253 357.63);
+    --color-darkpink: oklch(0.5859 0.2294 2.55);
+    --color-lightpink: oklch(0.6678 0.2079 355.84);
+    --color-brightgreen: oklch(89.7% 0.196 126.665);
+    --color-deepgreen: oklch(37.8% 0.077 168.94);
+}

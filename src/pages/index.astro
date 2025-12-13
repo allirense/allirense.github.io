@@ -1,0 +1,49 @@
+---
+import Layout from "../layouts/layout.astro";
+import { Icon } from 'astro-icon/components'
+
+---
+
+<Layout title="Alli Rense is Writing">
+    <div class="flex h-full grow w-full">
+        <div class="hidden md:block md:w-2/3">
+        </div>
+        <div class="w-full border-l-96 border-black md:w-1/3 bg-darkpink text-black md:border-0">
+
+            <header class="-ml-10 md:-ml-96 mt-20">
+                <div class="max-w-2xl">
+            <span class="bg-brightgreen text-4xl md:text-6xl leading-10 md:leading-18 text-deepgreen">Alli Rense <em>is writing</em> speculative and literary fiction.</span>
+            </div>
+            <div class="font-mono mt-4 text-brightgreen bg-black inline-block text-sm md:text-md">* And other things too</div>
+            <div>
+            <ul class="-ml-6 md:ml-0 font-lora font-light text-xs md:text-sm mt-8 text-white/80 tracking-widest inline-flex flex-col gap-4 bg-black max-w-xs">
+                <li>
+                    <a class="transition-all border-b border-white/60 hover:border-lightpink hover:text-white/100" href="https://bsky.app/profile/alli.ink">bluesky</a>
+                </li>
+                <li>
+                    <a class="transition-all border-b border-white/60 hover:border-lightpink hover:text-white/100" href="https://www.threads.com/@allirense">threads</a>
+                </li>
+            </ul>
+            </div>
+            </header>
+            <section class="font-mono text-white -mt-16 md:-mt-20 text-sm sm:text-base md:text-lg">
+                <ul class="flex flex-col gap-4 px-4 md:px-8">
+                    <li >
+                        <a class="transition-all flex items-center gap-2 border border-hotpink rounded-xl p-2 hover:bg-black/5 hover:border-lightpink *:last:text-lightpink hover:*:last:text-white" href="https://whisperingvoid.substack.com"><span class="grow-0">Subscribe to my newsletter: Whispering Into the Void
+                        </span><Icon class="shrink-0" size="32" name="pixelarticons:arrow-right" />
+                        </a>
+                    </li>
+                    <li>
+                        <a class="transition-all flex items-center gap-2 border border-hotpink rounded-xl p-2 hover:bg-black/5 hover:border-lightpink *:last:text-lightpink hover:*:last:text-white" href="https://www.magcloud.com/browse/issue/2921039"><span class="grow-0">Read about my experience with synesthesia in <em>All the Yellow Letters</em>
+                        </span><Icon class="shrink-0 text-lightpink" size="32" name="pixelarticons:arrow-right" />
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+        </div>
+</div>
+</Layout>
+
+
+    
